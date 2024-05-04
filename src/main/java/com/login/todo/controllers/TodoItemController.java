@@ -30,7 +30,7 @@ public class TodoItemController {
             response.put("data", todoItems);
             response.put("message", "Fetched All Todos");
             return ResponseEntity.status(HttpStatus.OK).body(response);
-        } catch (Exception e) {
+        } catch (Exception e) {     
             Map<String, Object> errorResponse = new HashMap<>();
             errorResponse.put("success", false);
             errorResponse.put("error_message", e.getMessage());
@@ -80,7 +80,7 @@ public class TodoItemController {
                 if (todoItem.getDescription() != null) {
                     todo.setDescription(todoItem.getDescription());
                 }
-                todoItemService.updateTodoItem(id, todo);
+                todoItemService.updateTodoItem(id, todo); 
                 Map<String, Object> response = new HashMap<>();
                 response.put("success", true);
                 response.put("message", "Todo Edited Successfully!");
