@@ -14,7 +14,7 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
 @Entity
-@Table(name = "User_Table", schema = "user")
+@Table(name = "User_Table")
 @Data
 public class User {
     @Id
