@@ -17,7 +17,7 @@ import lombok.Setter;
 @Setter
 @Getter
 @AllArgsConstructor
-@Table(name="Todo_Table")
+@Table
 public class TodoItem {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)

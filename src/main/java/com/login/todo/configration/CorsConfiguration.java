@@ -13,8 +13,8 @@ public class CorsConfiguration {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**") // Adjust the mapping according to your API endpoints
-                        .allowedOrigins("*") // Allow requests from any origin
-                        .allowedMethods("GET", "POST", "PUT", "DELETE","PATCH") 
+                        .allowedOriginPatterns("*") // Allow requests from this origin
+                        .allowedMethods("GET", "POST", "PUT", "DELETE","PATCH") // Allow these HTTP methods
                         .allowedHeaders("*") // Allow all headers
                         .allowCredentials(false); // Allow sending cookies
             }
